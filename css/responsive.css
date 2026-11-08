@@ -1,0 +1,10 @@
+/* Small screens (under 980px wide). */
+
+@media (max-width:980px){
+  html,body{overflow:auto}
+  #app{height:auto;min-height:100%}
+  .screen,.dev{grid-template-columns:1fr}
+  .stagecol{height:78vh}
+  .top{grid-template-columns:1fr;height:auto;padding:10px 16px;gap:8px}
+  .who{justify-self:start}
+}
