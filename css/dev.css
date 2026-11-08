@@ -1,0 +1,23 @@
+/* Developer tools and the dev jump menu. */
+
+/* developer tools */
+.soon{font-family:var(--display);font-size:13px;letter-spacing:.1em;line-height:1.9;color:var(--faint)}
+.soon span{display:block;padding:7px 12px;border:1px dashed var(--gold-lo);margin-bottom:6px}
+.dlist .chip{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;margin-bottom:6px;padding:10px 12px}
+.dlist .chip small{font-size:11px;letter-spacing:.1em;color:var(--gold);font-weight:500}
+.dstep{display:grid;grid-template-columns:1fr 30px 44px 30px;align-items:center;gap:6px;margin-bottom:6px}
+.dstep .lab{font-family:var(--display);font-size:15px;color:var(--ink)}
+.dstep .val{text-align:center;font-family:var(--display);font-weight:600;font-size:18px;color:var(--gold-hi)}
+.sum{margin:6px 0 0;font-family:var(--display);font-size:13px;letter-spacing:.08em;color:var(--dim)}
+.sum b{color:var(--gold-hi)}
+.dfoot{display:flex;gap:12px;margin-top:8px}.dfoot .btn{flex:1}
+#devJson{min-height:190px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.35}
+
+/* developer jump */
+.devHome{position:absolute;right:106px;bottom:6px}
+.devTop{justify-self:end;margin-right:8px;padding:6px 12px;font-size:13px}
+.top .devTop{grid-column:3;justify-self:end}
+.devmenu{position:fixed;z-index:60;width:300px;padding:8px;background:var(--p2);border:1px solid #4a4e57;border-radius:6px}
+.devmenu .dmt{padding:6px 8px 8px;font-size:13px;color:var(--dim)}
+.devmenu button{display:block;width:100%;padding:9px 10px;margin:0;background:none;border:0;border-radius:4px;text-align:left;color:var(--ink);font-size:15px;cursor:pointer}
+.devmenu button:hover{background:#2d3036}

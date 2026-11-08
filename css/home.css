@@ -1,0 +1,11 @@
+/* Home / login cards. */
+
+/* home + developer login */
+.home{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative}
+.card{width:min(430px,92vw);padding:38px 36px 30px;text-align:left;background:var(--br),linear-gradient(180deg,rgba(23,19,15,.97),rgba(12,9,7,.98))}
+.card .crest{margin:6px auto 22px}
+.card h1{margin:0;text-align:center;font-family:var(--brand);font-weight:700;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);text-shadow:0 2px 0 #000}
+.card .tag{margin:8px 0 26px;text-align:center;font-style:italic;color:var(--dim);font-size:17px}
+.card .hint{margin:16px 0 0;text-align:center;font-size:15px;font-style:italic;color:var(--faint)}
+.card .row2{display:flex;gap:12px;margin-top:6px}.card .row2 .btn{flex:1}
+.devBtn{position:absolute;right:6px;bottom:6px}
