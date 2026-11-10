@@ -1,4 +1,4 @@
-/* Home / login cards. */
+/* Home menu and Campaigns screen. */
 
 /* home + developer login */
 .home{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative}
@@ -7,5 +7,14 @@
 .card h1{margin:0;text-align:center;font-family:var(--brand);font-weight:700;font-size:24px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-hi);text-shadow:0 2px 0 #000}
 .card .tag{margin:8px 0 26px;text-align:center;font-style:italic;color:var(--dim);font-size:17px}
 .card .hint{margin:16px 0 0;text-align:center;font-size:15px;font-style:italic;color:var(--faint)}
-.card .row2{display:flex;gap:12px;margin-top:6px}.card .row2 .btn{flex:1}
 .devBtn{position:absolute;right:6px;bottom:6px}
+.menuBtns{display:grid;gap:12px}
+.campList{display:grid;gap:8px;margin-bottom:16px}
+.camp{display:block;width:100%;padding:14px 16px;text-align:left;cursor:pointer;color:var(--ink);background:var(--p1);border:1px solid var(--gold-lo);border-radius:6px}
+.camp:hover{border-color:var(--gold)}
+.camp[disabled]{opacity:.45;cursor:default}
+.camp[disabled]:hover{border-color:var(--gold-lo)}
+.camp b{display:block;font-family:var(--display);font-size:18px;font-weight:600}
+.camp span{display:block;margin-top:2px;font-size:15px;color:var(--dim)}
+.card #campHint{margin:0 0 14px}
+#campHint:empty{display:none}

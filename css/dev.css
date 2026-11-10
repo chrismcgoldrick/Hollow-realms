@@ -14,7 +14,7 @@
 #devJson{min-height:190px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.35}
 
 /* developer jump */
-.devHome{position:absolute;right:106px;bottom:6px}
+.devHome{position:absolute;right:136px;bottom:6px}
 .devTop{justify-self:end;margin-right:8px;padding:6px 12px;font-size:13px}
 .top .devTop{grid-column:3;justify-self:end}
 .devmenu{position:fixed;z-index:60;width:300px;padding:8px;background:var(--p2);border:1px solid #4a4e57;border-radius:6px}

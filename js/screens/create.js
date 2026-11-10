@@ -205,6 +205,13 @@ function rollGold(){
     }
   },66);   /* about 15 frames per second */
 }
+/* Wipe the current hero's choices and open character creation. */
+function startNewHero(){
+  var h=state.hero;h.name='';h.chr={};h.sk={};h.fp=[];h.fc=[];h.fk=[];h.goldRolls={};resetGear();
+  $('name').value='';
+  state.heroReady=false;
+  go('create');
+}
 function buildCreate(){
   var h=state.hero;
   buildSpeciesChips();
@@ -235,7 +242,7 @@ function buildCreate(){
   wireGear();
   var tabs=[['chr','Characteristics'],['sk','Skills']];
   tabs.forEach(function(t){var b=el('button','chip',t[1]);b.type='button';b.dataset.k=t[0];b.addEventListener('click',function(){state.trainTab=t[0];refresh();});$('trainTabs').appendChild(b);});
-  $('beginBtn').addEventListener('click',function(){if(!state.hero.gearMode){toast('Accept your starting gear or choose to shop first.');return;}go('world');});
+  $('beginBtn').addEventListener('click',function(){if(!state.hero.gearMode){toast('Accept your starting gear or choose to shop first.');return;}state.heroReady=true;go('world');});
 }
 
 

@@ -11,7 +11,7 @@ index.html            The page layout (all screens) + the list of CSS/JS files i
 css/
   base.css            Shared look: colour variables, top bar, panels, buttons, inputs
   create.css          Character creation screen
-  home.css            Home / login screen
+  home.css            Home menu and Campaigns screen
   dev.css             Developer tools
   responsive.css      Small-screen tweaks
   theme.css           Plain dark theme - OVERRIDES the gold look in the files above

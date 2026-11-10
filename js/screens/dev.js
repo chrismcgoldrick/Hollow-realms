@@ -97,6 +97,7 @@ function devWire(){
 
 function testHero(){
   var h=state.hero;
+  state.heroReady=true;
   h.name='Test Hero';h.species='human';h.cls='fighter';
   h.chr={BR:1};h.sk={'Melee (Heavy)':1,'Resilience':1,'Athletics':1};
   h.fp=['Athletics','Perception'];h.fc=[];h.fk=['Melee (Heavy)','Resilience','Vigilance','Brawl'];
@@ -106,8 +107,7 @@ function testHero(){
 }
 function devJump(j){
   $('devMenu').hidden=true;
-  if(!state.user)state.user='Developer';
-  if(j==='create-new'){var h=state.hero;h.name='';h.chr={};h.sk={};h.fp=[];h.fc=[];h.fk=[];h.goldRolls={};resetGear();go('create');}
+  if(j==='create-new')startNewHero();
   else if(j==='create-keep')go('create');
   else if(j==='test'){testHero();SAMPLE=MISSIONS.test;go('world');}
   else if(j==='test-keep'){SAMPLE=MISSIONS.test;go('world');}

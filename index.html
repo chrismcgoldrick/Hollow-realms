@@ -19,33 +19,32 @@
     <div class="brand"><span class="crest"></span><span>The Hollow Realms</span></div>
     <nav class="stepper" id="stepper" hidden><span id="st1">I &middot; Heritage &amp; Career</span><i></i><span id="st2">II &middot; Training</span><i></i><span id="st3">III &middot; Gear</span></nav>
     <button class="btn small devOpen devTop" type="button">Dev</button>
-    <div class="who" id="who" hidden><span id="whoName"></span><button class="linkbtn" id="logoutBtn" type="button">Log out</button></div>
+    <div class="who" id="who" hidden><button class="linkbtn" id="homeBtn" type="button">&#9666; Home</button></div>
   </header>
 
   <main class="view home" id="screen-home" hidden>
-    <form class="card" id="loginForm" autocomplete="off">
+    <div class="card">
       <div class="crest"></div>
       <h1>The Hollow Realms</h1>
       <p class="tag">A tale of choices, dice and consequence</p>
-      <label class="fl">Username<input id="user" type="text" maxlength="32" autocomplete="off" placeholder="Your name"></label>
-      <label class="fl">Password<input id="pass" type="password" maxlength="64" autocomplete="off" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;"></label>
-      <button class="btn go big" type="submit">Login</button>
-      <p class="hint">Accounts are not connected yet. Leave these blank and press Login to continue.</p>
-    </form>
+      <div class="menuBtns">
+        <button class="btn go big" id="newCharBtn" type="button">Create New Character</button>
+        <button class="btn big" id="campaignsBtn" type="button">Campaigns</button>
+      </div>
+    </div>
     <button class="btn ghost devBtn" id="devBtn" type="button">Developer</button>
     <button class="btn ghost devOpen devHome" type="button">Dev jump</button>
   </main>
 
-  <main class="view home" id="screen-devlogin" hidden>
-    <form class="card" id="devForm1" autocomplete="off">
+  <main class="view home" id="screen-campaigns" hidden>
+    <div class="card">
       <div class="crest"></div>
-      <h1>Developer Access</h1>
-      <p class="tag">Species and rules tools</p>
-      <label class="fl">Developer name<input id="duser" type="text" maxlength="32" autocomplete="off"></label>
-      <label class="fl">Developer password<input id="dpass" type="password" maxlength="64" autocomplete="off"></label>
-      <div class="row2"><button class="btn" id="dBack" type="button">Back</button><button class="btn go" type="submit">Enter</button></div>
-      <p class="hint">Blank is accepted for now.</p>
-    </form>
+      <h1>Campaigns</h1>
+      <p class="tag">Choose a story to play</p>
+      <p class="hint" id="campHint"></p>
+      <div class="campList" id="campList"></div>
+      <button class="btn big" id="campBack" type="button">&#9666; Back</button>
+    </div>
   </main>
 
   <main class="view dev" id="screen-dev" hidden>
@@ -113,6 +112,7 @@
     </aside>
   </main>
   <main class="view play" id="screen-play" hidden>
+    <button class="btn small" id="playHome" type="button">&#9666; Home</button>
     <button class="btn small devOpen" id="playDev" type="button">Dev</button>
     <aside class="drawer" id="drawer" aria-label="Character panel"><div class="dhead"><b id="drawerTitle"></b><button class="linkbtn" id="drawerClose" type="button" aria-label="Close">&#10005;</button></div><div class="dbody" id="drawerBody"></div></aside>
     <nav class="rail" id="rail" aria-label="Menu"><button type="button" data-t="char" data-tip="Skills, stats and vitals"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span>Character</span><small>C</small></button><button type="button" data-t="map" data-tip="Where you are"><svg viewBox="0 0 24 24"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></svg><span>Map</span><small>M</small></button><button type="button" data-t="inv" data-tip="Gold and carried gear"><svg viewBox="0 0 24 24"><path d="M7 8V6a5 5 0 0110 0v2"/><path d="M5 8h14l1 13H4z"/></svg><span>Inventory</span><small>I</small></button></nav>

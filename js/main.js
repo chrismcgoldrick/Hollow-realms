@@ -14,7 +14,7 @@ function frame(now){
   if(reduce||now-last<62)return;   /* about 15 frames per second */
   var sc=state.screen;
   if(sc==='create'||sc==='train'||sc==='gear'){last=now;time=now/1000;renderStage();}
-  else if(sc==='home'||sc==='devlogin'||sc==='world'){last=now;time=now/1000;drawBg();}
+  else if(sc==='home'||sc==='campaigns'||sc==='world'){last=now;time=now/1000;drawBg();}
 }
 requestAnimationFrame(frame);
 if(window.__test)window.__api={drawHero:drawHero,HAIR:HAIR,SPECIES:SPECIES,CLASSES:CLASSES,state:state};

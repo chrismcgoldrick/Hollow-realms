@@ -3,7 +3,7 @@
 
 /* ============================ 2. STATE ============================ */
 var state={
-  screen:'home',user:null,
+  screen:'home',heroReady:false,   /* heroReady: true once a hero has been finished, unlocks Campaigns */
   hero:{name:'',species:'human',sex:'m',skin:0,hair:2,cls:'fighter',chr:{},sk:{},fp:[],fc:[],fk:[],goldRolls:{},gearMode:null,gearPick:{},inv:[],shopCat:0,
     gear:{head:'class',body:'class',legs:'class',feet:'class',cloak:'class',main:'class',off:'class'}}
 };

@@ -1,16 +1,15 @@
 /* Screen switching: which screens exist and go(name) to show one. */
 'use strict';
 
-var VIEWS=['screen-home','screen-devlogin','screen-dev','screen-create','screen-play'];
+var VIEWS=['screen-home','screen-campaigns','screen-dev','screen-create','screen-play'];
 var screens={
-  home:{id:'screen-home',menu:true,enter:function(){state.user=null;}},
-  devlogin:{id:'screen-devlogin',menu:true,enter:function(){}},
+  home:{id:'screen-home',menu:true,enter:function(){}},
+  campaigns:{id:'screen-campaigns',menu:true,enter:function(){renderCampaigns();}},
   dev:{id:'screen-dev',enter:function(){devRender();}},
   create:{id:'screen-create',stepper:1,enter:function(){$('step1').hidden=false;$('step2').hidden=true;$('step3').hidden=true;buildSpeciesChips();refresh();resizeStage();}},
   train:{id:'screen-create',stepper:2,enter:function(){$('step1').hidden=true;$('step2').hidden=false;$('step3').hidden=true;refresh();resizeStage();}},
   gear:{id:'screen-create',stepper:3,enter:function(){$('step1').hidden=true;$('step2').hidden=true;$('step3').hidden=false;refresh();applyGearMode(false);resizeStage();}},
   world:{id:'screen-play',play:true,enter:function(){renderPlay();resizeBg();}}
-  /* missions:{...}, scene:{...}  <- added in later steps */
 };
 function go(name){
   var s=screens[name];
@@ -22,8 +21,7 @@ function go(name){
   $('st1').className=s.stepper===1?'on':(s.stepper>1?'done':'');
   $('st2').className=s.stepper===2?'on':(s.stepper===3?'done':'');
   $('st3').className=s.stepper===3?'on':'';
-  $('who').hidden=!(state.user!=null&&(s.stepper||name==='dev'));
-  $('whoName').textContent=state.user?state.user:'Guest';
+  $('who').hidden=!(s.stepper||name==='dev');
   s.enter();
   if(s.menu||s.play)resizeBg();
 }

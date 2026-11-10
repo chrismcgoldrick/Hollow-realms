@@ -51,3 +51,5 @@ body.play #app{padding:0}
 .gtip{position:fixed;z-index:70;max-width:300px;padding:10px 14px;background:#161a22;border:1px solid var(--bd);border-radius:3px;pointer-events:none;color:var(--tx);font-size:15px;line-height:1.4}
 .gtip b{display:block;font-family:Georgia,serif;font-size:16px;margin-bottom:3px}
 .gtip .h{display:block;margin-top:8px;color:var(--pos);font-style:italic}
+.play .small{z-index:5}
+.play #playDev{left:100px}
